@@ -21,7 +21,7 @@ namespace Lab_1
             int number1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Второе число: ");
             int number2 = Convert.ToInt32(Console.ReadLine());
-            if (number2 == 0)
+            if (number2 != 0)
             {
                 double quotient = Convert.ToDouble(number1) / number2;
                 Console.WriteLine("{0} / {1} = {2}", number1, number2, quotient);
