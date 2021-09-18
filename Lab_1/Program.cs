@@ -35,15 +35,15 @@ namespace Lab_1
 
             Console.WriteLine("\nHome exercise 2.1");
             Console.Write("Введите букву: ");
-            char letter = Convert.ToChar(Console.ReadLine());
+            char letter = Console.ReadKey().KeyChar;
             if (letter == 'z' || letter == 'я' || letter == 'Я' || letter == 'Z')
             {
-                Console.WriteLine("Следующей буквой за введенной букой не существует");
+                Console.WriteLine("\nСледующей буквой за введенной букой не существует");
             }
             else
             {
                 letter = Convert.ToChar(Convert.ToInt16(letter) + 1);
-                Console.WriteLine("Следующей буквой является - {0}", letter);
+                Console.WriteLine("\nСледующей буквой является - {0}", letter);
             }
 
 
@@ -67,10 +67,13 @@ namespace Lab_1
                 discriminant = Math.Pow(b * b - 4 * a * c, 0.5);
                 if (discriminant == 0)
                 {
-                    Console.WriteLine(-b / (2 * a));
+                    Console.WriteLine("Корень уравнения: {0}", -b / (2 * a));
                 }
-                Console.WriteLine("Корни уравнения:\n1) {0}\n2) {1}",
-                    (-b + Math.Pow(discriminant, 0.5)) / (2 * a), (-b - Math.Pow(discriminant, 0.5)) / (2 * a));
+                else
+                {
+                    Console.WriteLine("Корни уравнения:\n1) {0}\n2) {1}",
+                        (-b + Math.Pow(discriminant, 0.5)) / (2 * a), (-b - Math.Pow(discriminant, 0.5)) / (2 * a));
+                }
             }
 
             Console.ReadKey();
