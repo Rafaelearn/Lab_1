@@ -31,11 +31,9 @@ namespace Lab_1
                 Console.WriteLine("Делить {0} на {1} невозможно!", number1, number2);
             }
             
-
-
             Console.WriteLine("\nHome exercise 2.1");
             Console.Write("Введите букву: ");
-            char letter = Console.ReadKey().KeyChar;
+            char letter = Convert.ToChar(Console.ReadLine());
             if (letter == 'z' || letter == 'я' || letter == 'Я' || letter == 'Z')
             {
                 Console.WriteLine("\nСледующей буквой за введенной букой не существует");
