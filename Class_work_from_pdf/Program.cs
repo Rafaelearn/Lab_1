@@ -79,8 +79,9 @@ namespace Class_work_from_pdf
             Console.WriteLine("\nS2.4");
             Console.Write("Введите значение высоты над землей в метрах: ");
             double height_gr = Convert.ToDouble(Console.ReadLine());
+            int radius_eath = 6350000;
             Console.WriteLine("Считая, что Земля — идеальная сфера с радиусом R=6350 км. Расстояние до линии горизонта: {0} метров",
-                Math.Pow(2 * 6350000 * height_gr + height_gr * height_gr, 0.5));
+                Math.Sqrt(2 * radius_eath * height_gr + height_gr * height_gr));
 
             Console.WriteLine("\nS2.5");
             Console.Write("Введите значение ребра куба: ");
@@ -100,7 +101,7 @@ namespace Class_work_from_pdf
             Console.Write("Введите 2-ое число: ");
             double number_5 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Их среденее арифимитическое = {0};\nИх среденее геометрическое = {1};",
-                (number_4 + number_5) / 2, Math.Pow(number_4 * number_5, 0.5));
+                (number_4 + number_5) / 2, Math.Sqrt(number_4 * number_5));
 
             Console.WriteLine("\nS2.8");
             Console.Write("Введите массу тела в кг: ");
@@ -131,7 +132,7 @@ namespace Class_work_from_pdf
             double leg_1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите 2-ой катет: ");
             double leg_2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Гипотенуза = {0}", Math.Pow(leg_2 * leg_2 + leg_1 * leg_1, 0.5));
+            Console.WriteLine("Гипотенуза = {0}", Math.Sqrt(leg_2 * leg_2 + leg_1 * leg_1));
 
             Console.WriteLine("\nS2.12");
             Console.WriteLine("Введите внешний и внутренний радиусы кольца.");
@@ -156,7 +157,7 @@ namespace Class_work_from_pdf
             Console.Write("2-ое число: ");
             double number_7 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Среднее арифимитическое модулей этих чисел = {0};\nСреднее геометрическое модулей этих чисел = {1}",
-                (Math.Abs(number_6) + Math.Abs(number_7)) / 2, Math.Pow(Math.Abs(number_6) * Math.Abs(number_7), 0.5));
+                (Math.Abs(number_6) + Math.Abs(number_7)) / 2, Math.Sqrt(Math.Abs(number_6) * Math.Abs(number_7)));
 
             Console.WriteLine("\nS2.14");
             Console.Write("Введите 1-ое основание трапеции: ");
@@ -200,7 +201,7 @@ namespace Class_work_from_pdf
             Console.Write("y2 = ");
             double y2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("d(A,B) = {0}",
-                Math.Pow(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2), 0.5));
+                Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
 
             Console.WriteLine("\nS2.18");
             Console.Write("Введите 1-ое основание трапеции: ");
@@ -211,7 +212,7 @@ namespace Class_work_from_pdf
             double height_2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Площадь равнобедренной трапеции: {0}",
                 base_4 + base_3 +
-                2 * (Math.Pow(Math.Pow(Math.Abs(base_4 - base_3) / 2, 2) + Math.Pow(height_2, 2), 2)));
+                2 * (Math.Pow(Math.Pow((base_4 - base_3) / 2, 2) + Math.Pow(height_2, 2), 2)));
 
             Console.WriteLine("\nS2.19");
             Console.Write("Введите 1-ое основание трапеции: ");
@@ -237,13 +238,13 @@ namespace Class_work_from_pdf
             double x5 = Convert.ToDouble(Console.ReadLine());
             Console.Write("y5 = ");
             double y5 = Convert.ToDouble(Console.ReadLine());
-            double ab = Math.Pow(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2), 0.5);
-            double ac = Math.Pow(Math.Pow(x5 - x3, 2) + Math.Pow(y5 - y3, 2), 0.5);
-            double cb = Math.Pow(Math.Pow(x5 - x4, 2) + Math.Pow(y5 - y4, 2), 0.5);
+            double ab = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+            double ac = Math.Sqrt(Math.Pow(x5 - x3, 2) + Math.Pow(y5 - y3, 2));
+            double cb = Math.Sqrt(Math.Pow(x5 - x4, 2) + Math.Pow(y5 - y4, 2));
             double perimeter = ab + ac + cb;
             Console.WriteLine("Периметр треугольника: {0}", perimeter);
             Console.WriteLine("Площадь треугольника: {0}",
-                Math.Pow((perimeter / 2) * (perimeter / 2 - ac) * (perimeter / 2 - ab) * (perimeter / 2 - cb), 0.5));
+                Math.Sqrt((perimeter / 2) * (perimeter / 2 - ac) * (perimeter / 2 - ab) * (perimeter / 2 - cb)));
 
             Console.WriteLine("\nS2.21");
             Console.WriteLine("Введите координаты вершин выпуклого четырехугольника E(x6, y6), F(x7, y7), G(x8, y8), H(x9, y9).");
@@ -263,16 +264,16 @@ namespace Class_work_from_pdf
             double x9 = Convert.ToDouble(Console.ReadLine());
             Console.Write("y9 = ");
             double y9 = Convert.ToDouble(Console.ReadLine());
-            double ef = Math.Pow(Math.Pow(x6 - x7, 2) + Math.Pow(y6 - y7, 2), 0.5);
-            double eg = Math.Pow(Math.Pow(x6 - x8, 2) + Math.Pow(y6 - y8, 2), 0.5);
-            double eh = Math.Pow(Math.Pow(x6 - x9, 2) + Math.Pow(y6 - y9, 2), 0.5);
-            double gf = Math.Pow(Math.Pow(x8 - x7, 2) + Math.Pow(y8 - y7, 2), 0.5);
-            double gh = Math.Pow(Math.Pow(x8 - x9, 2) + Math.Pow(y8 - y9, 2), 0.5);
+            double ef = Math.Sqrt(Math.Pow(x6 - x7, 2) + Math.Pow(y6 - y7, 2));
+            double eg = Math.Sqrt(Math.Pow(x6 - x8, 2) + Math.Pow(y6 - y8, 2));
+            double eh = Math.Sqrt(Math.Pow(x6 - x9, 2) + Math.Pow(y6 - y9, 2));
+            double gf = Math.Sqrt(Math.Pow(x8 - x7, 2) + Math.Pow(y8 - y7, 2));
+            double gh = Math.Sqrt(Math.Pow(x8 - x9, 2) + Math.Pow(y8 - y9, 2));
             double s_perimetr_efg = (ef + gf + eg) / 2;
             double s_perimetr_ehg = (eh + gh + eg) / 2;
             Console.WriteLine("Площадь выпуклого четырехугольника: {0}",
-                Math.Pow((s_perimetr_efg / 2) * (s_perimetr_efg / 2 - ef) * (s_perimetr_efg / 2 - gf) * (s_perimetr_efg / 2 - eg), 0.5) +
-                Math.Pow((s_perimetr_ehg / 2) * (s_perimetr_ehg / 2 - eh) * (s_perimetr_ehg / 2 - gh) * (s_perimetr_ehg / 2 - eg), 0.5));
+                Math.Sqrt((s_perimetr_efg / 2) * (s_perimetr_efg / 2 - ef) * (s_perimetr_efg / 2 - gf) * (s_perimetr_efg / 2 - eg)) +
+                Math.Sqrt((s_perimetr_ehg / 2) * (s_perimetr_ehg / 2 - eh) * (s_perimetr_ehg / 2 - gh) * (s_perimetr_ehg / 2 - eg)));
 
             Console.WriteLine("\nS2.22");
             int candies_price = random.Next(100, 200);
