@@ -60,7 +60,7 @@ namespace Lab_1
             {
                 discriminant = Math.Pow(4 * a * c - b * b, 0.5);
                 Console.WriteLine("Корни уравнения:\n1) {0} + {1}i\n2) {0} - {1}i",
-                    -b / (2 * a), Math.Pow(discriminant, 0.5) / (2 * a));
+                    -b / (2 * a), Math.Sqrt(discriminant) / (2 * a));
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Lab_1
                 else
                 {
                     Console.WriteLine("Корни уравнения:\n1) {0}\n2) {1}",
-                        (-b + Math.Pow(discriminant, 0.5)) / (2 * a), (-b - Math.Pow(discriminant, 0.5)) / (2 * a));
+                        (-b + Math.Sqrt(discriminant)) / (2 * a), (-b - Math.Sqrt(discriminant)) / (2 * a));
                 }
             }
 
